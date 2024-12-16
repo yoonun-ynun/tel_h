@@ -145,6 +145,9 @@ async function getInfo(number){
 	var group = galleryinfo?.groups?.[0]?.group;
 	var artist = galleryinfo?.artists?.[0]?.artist;
 	var tag_res = []
+	if(!galleryinfo.tags){
+		galleryinfo.tags = []
+	}
 	for(var i = 0;i<galleryinfo.tags.length;i++){
 		var tagname = galleryinfo.tags[i].tag;
 		if(galleryinfo.tags[i].male == 1){
